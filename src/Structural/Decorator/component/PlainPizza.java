@@ -1,6 +1,4 @@
-package Structural.Decorator;
-
-import Structural.Decorator.component.Pizza;
+package Structural.Decorator.component;
 
 public class PlainPizza implements Pizza {
     @Override

@@ -1,6 +1,7 @@
 package Structural.Decorator;
 
 import Structural.Decorator.component.Pizza;
+import Structural.Decorator.component.PlainPizza;
 import Structural.Decorator.decorator.contrete_decorator.CheeseDecorator;
 import Structural.Decorator.decorator.contrete_decorator.PepperoniDecorator;
 
