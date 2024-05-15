@@ -16,8 +16,8 @@ public class File implements FileSystemComponent {
         System.out.println("File : " + name + ", Size: " + size + " bytes");
     }
 
-    @Override
-    public long getSize() {
-        return size;
-    }
+//    @Override
+//    public long getSize() {
+//        return size;
+//    }
 }

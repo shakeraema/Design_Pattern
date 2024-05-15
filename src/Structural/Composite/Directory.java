@@ -5,10 +5,12 @@ import java.util.List;
 
 public class Directory implements FileSystemComponent{
     private String name;
+    private long size;
     private List<FileSystemComponent> children;
 
-    public Directory(String name){
+    public Directory(String name, long size){
         this.name = name;
+        this.size = size;
         children = new ArrayList<>();
     }
 
@@ -29,13 +31,15 @@ public class Directory implements FileSystemComponent{
         }
     }
 
-    public long getSize() {
-        long size = 0;
-        for (FileSystemComponent component : children) {
-            if (component instanceof File) {
-                size += ((File) component).getSize();
-            }
-        }
-        return size;
-    }
+
+
+//    public long getSize() {
+//        long size = 0;
+//        for (FileSystemComponent component : children) {
+//            if (component instanceof File) {
+//                size += ((File) component).getSize();
+//            }
+//        }
+//        return size;
+//    }
 }
