@@ -6,14 +6,14 @@ public class Client {
         File file2 = new File("Image.jpg", 2048);
         File file3 = new File("Spreadsheet.xlsx", 3072);
 
-        Directory directory1 = new Directory("Documents");
+        Directory directory1 = new Directory();
         directory1.addComponent(file1);
         directory1.addComponent(file3);
 
-        Directory directory2 = new Directory("Pictures");
+        Directory directory2 = new Directory();
         directory2.addComponent(file2);
 
-        Directory rootDirectory = new Directory("Root");
+        Directory rootDirectory = new Directory();
         rootDirectory.addComponent(directory1);
         rootDirectory.addComponent(directory2);
 

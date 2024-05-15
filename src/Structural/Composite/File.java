@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class File implements FileSystemComponent {
     private String name;
-    private long size; // Add size attribute
+    private long size;
 
     public File(String name, long size) {
         this.name = name;
@@ -16,8 +16,8 @@ public class File implements FileSystemComponent {
         System.out.println("File : " + name + ", Size: " + size + " bytes");
     }
 
-//    @Override
-//    public long getSize() {
-//        return size;
-//    }
+ @Override
+    public long getSize() {
+        return size;
+    }
 }

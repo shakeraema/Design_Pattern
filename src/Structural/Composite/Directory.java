@@ -8,7 +8,7 @@ public class Directory implements FileSystemComponent{
     private long size;
     private List<FileSystemComponent> children;
 
-    public Directory(String name, long size){
+    public Directory(){
         this.name = name;
         this.size = size;
         children = new ArrayList<>();
@@ -32,14 +32,11 @@ public class Directory implements FileSystemComponent{
     }
 
 
-
-//    public long getSize() {
-//        long size = 0;
-//        for (FileSystemComponent component : children) {
-//            if (component instanceof File) {
-//                size += ((File) component).getSize();
-//            }
-//        }
-//        return size;
-//    }
+@Override
+public long getSize() {
+    for (FileSystemComponent component : children) {
+        size += component.getSize();
+    }
+    return size;
+}
 }
